@@ -1,0 +1,5 @@
+{
+    "require-dev": {
+        "krlove/eloquent-model-generator": "^1.3"
+    }
+}
