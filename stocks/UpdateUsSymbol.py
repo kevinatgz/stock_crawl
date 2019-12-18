@@ -12,7 +12,7 @@ try:
     client = pymongo.MongoClient(host='localhost', port=27017)
     db = client.stock_news
     collection = db.stocks
-    with open('../usstock/companylist-3.csv','rb') as myFile:
+    with open('../usstock/companylist2.csv','rb') as myFile:
         lines=csv.reader(myFile)
         count=0
         for line in lines:

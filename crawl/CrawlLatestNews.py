@@ -4,19 +4,19 @@ Created on Mar 24, 2019
 
 @author: kevin
 '''
-from kafka import KafkaProducer
+# from kafka import KafkaProducer
 import json
 import pymongo
 import random 
 import time
 import ssl
-import MySQLdb
+# import MySQLdb
 import re
 import hashlib
 import urllib2
 import cookielib
 
-producer1 = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=lambda m: json.dumps(m).encode('ascii'))
+# producer1 = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=lambda m: json.dumps(m).encode('ascii'))
 
 def crawlLatestNews(symbol,client):  
 #     client = pymongo.MongoClient(host='localhost', port=27017)
