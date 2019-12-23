@@ -1,3 +1,7 @@
-
+venv
 .pydevproject
 .project
+.idea
+usstock/companylist.csv
+usstock/companylist1.csv
+usstock/companylist2.csv
