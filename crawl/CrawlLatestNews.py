@@ -19,7 +19,7 @@ import cookielib
 # producer1 = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=lambda m: json.dumps(m).encode('ascii'))
 
 def crawlLatestNews(symbol,client):  
-#     client = pymongo.MongoClient(host='localhost', port=27017)
+    client = pymongo.MongoClient(host='localhost', port=27017)
     randomNum = ''.join(str(random.choice(range(10))) for _ in range(12)) 
     rand = str(random.random())
     m = hashlib.md5() #创建Md5对象
