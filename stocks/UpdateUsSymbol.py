@@ -8,6 +8,7 @@ import csv
 import pymongo
 import time
 
+# https://old.nasdaq.com/screening/company-list.aspx
 try:
     client = pymongo.MongoClient(host='localhost', port=27017)
     db = client.stock_news
@@ -21,8 +22,8 @@ try:
                 continue
 #             print line    
             stock = {
-                'Symbol': line[0].strip(),
-                'Name': line[1],
+                # 'Symbol': line[0].strip(),
+                # 'Name': line[1],
                 'Sector':line[5],
                 'Industry': line[6],
                 'SummaryUrl':line[7],
@@ -34,7 +35,8 @@ try:
             }
             print (stock)
             count+=1
-            result = collection.insert(stock)
+            # result = collection.insert(stock)
+            result = collection.update({'Symbol': line[0].strip(), 'Name': line[1].strip()}, {'$set': stock}, upsert=True)
             print(result)
 
 except :
